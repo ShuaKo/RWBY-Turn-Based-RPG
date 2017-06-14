@@ -1,4 +1,3 @@
-module.imports = performQuery;
 //-----------------BASE CODE---------------
 function World(){
 	this.size = 50;
@@ -143,7 +142,7 @@ function Character(value,x,y,scale){
 	};
 }
 function Song(value){
-	this.audio = new Audio("../static/media/" + value);
+	this.audio = new Audio("./static/media/" + value);
 	this.speed = 5;
 	this.isPlaying = false;
 	this.progress = 0;
@@ -155,7 +154,7 @@ function Song(value){
 		this.waveNo++;
 	}
 	this.setSong = function(value){
-		this.audio = new Audio("../static/media/" + value);
+		this.audio = new Audio("./static/media/" + value);
 	}
 	this.extractWave = function(){
 		this.waveNo--;
@@ -180,9 +179,9 @@ function Interface(){
 	this.name;
 	this.score;
 	this.Title = new Image();
-	this.Title.src = "../static/img/GameTitle.png";
+	this.Title.src = "./static/img/GameTitle.png";
 	this.Beacon = new Image();
-	this.Beacon.src = "../static/img/Beacon-100.png";
+	this.Beacon.src = "./static/img/Beacon-100.png";
 	this.draw = function(){
 		ctx.fillStyle = "#aaa";
 		ctx.fillRect(225,250,250,150);
@@ -218,19 +217,19 @@ function Interface(){
 	}
 	this.updateBeacon = function(value){
 		if(value < 100){
-			this.Beacon.src = "../static/img/Beacon-100.png";
+			this.Beacon.src = "./static/img/Beacon-100.png";
 		}
 		if(value < 75){
-			this.Beacon.src = "../static/img/Beacon-75.png";
+			this.Beacon.src = "./static/img/Beacon-75.png";
 		}
 		if(value < 50){
-			this.Beacon.src = "../static/img/Beacon-50.png";
+			this.Beacon.src = "./static/img/Beacon-50.png";
 		}
 		if(value < 25){
-			this.Beacon.src = "../static/img/Beacon-25.png";
+			this.Beacon.src = "./static/img/Beacon-25.png";
 		}
 		if(value <= 0){
-			this.Beacon.src = "../static/img/Beacon-0.png";
+			this.Beacon.src = "./static/img/Beacon-0.png";
 		}
 	}
 }
