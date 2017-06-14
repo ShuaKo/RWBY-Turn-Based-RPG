@@ -306,7 +306,6 @@ function CheckInput(){
 			Game.Platform[0][6].isEnemy = false;
 			if(CurrentScore < 100){
 				CurrentScore++;
-				Score+=5;
 			}
 		}
 	}
@@ -315,8 +314,8 @@ function CheckInput(){
 			Game.Platform[1][6].isEnemy = false;
 			if(CurrentScore < 100){
 				CurrentScore++;
-				Score+=5;
 			}
+			Score+=5;
 		}
 	}
 	if(Game.BlakeActive){
@@ -324,8 +323,8 @@ function CheckInput(){
 			Game.Platform[2][6].isEnemy = false;
 			if(CurrentScore < 100){
 				CurrentScore++;
-				Score+=5;
 			}
+			Score+=5;
 		}
 	}
 	if(Game.YangActive){
@@ -333,8 +332,8 @@ function CheckInput(){
 			Game.Platform[3][6].isEnemy = false;
 			if(CurrentScore < 100){
 				CurrentScore++;
-				Score+=5;
 			}
+			Score+=5;
 		}
 	}
 	if(Game.Platform[0][7].isEnemy){
